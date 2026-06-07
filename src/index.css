@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    @apply bg-ink-950 text-slatey-200 antialiased;
+  }
+
+  body {
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgba(56, 189, 248, 0.28);
+    color: #e6edf6;
+  }
+
+  /* Visible, consistent keyboard focus across interactive elements. */
+  :focus-visible {
+    outline: 2px solid theme('colors.signal.DEFAULT');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-signal/25 bg-signal/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-signal-soft;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-gradient text-ink-950 hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply btn border border-ink-600 bg-ink-800/60 text-slatey-100 hover:border-signal/50 hover:bg-ink-700/60;
+  }
+
+  .surface-card {
+    @apply rounded-xl2 border border-ink-700/70 bg-ink-850/70 backdrop-blur-sm;
+  }
+}
+
+/* Honor users who prefer reduced motion: kill non-essential animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

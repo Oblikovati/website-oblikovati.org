@@ -12,9 +12,21 @@
     @apply bg-ink-950 text-slatey-200 antialiased;
   }
 
+  /* Body is the Newsreader reading serif, matching oblikovati.com's
+     Overlay-derived type system. Colors stay on the .org dark palette. */
   body {
-    font-feature-settings: 'cv11', 'ss01';
+    @apply font-serif;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Headings and the wordmark use the geometric display sans (Albert Sans),
+     with the same tight tracking convention as oblikovati.com. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-extrabold;
+    letter-spacing: -0.02em;
   }
 
   ::selection {
@@ -39,12 +51,16 @@
     @apply bg-brand-gradient bg-clip-text text-transparent;
   }
 
+  /* Mono uppercase eyebrow label, matching oblikovati.com's label
+     typography; keeps the .org signal-accent pill treatment. */
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-signal/25 bg-signal/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-signal-soft;
+    @apply inline-flex items-center gap-2 rounded-full border border-signal/25 bg-signal/5 px-3 py-1 font-mono text-2xs font-medium uppercase tracking-label text-signal-soft;
   }
 
+  /* Keep buttons in the display sans (Albert Sans) so they don't inherit the
+     serif body face; preserves .org's existing button shape and weight. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-display text-sm font-semibold transition-colors duration-200;
   }
 
   .btn-primary {

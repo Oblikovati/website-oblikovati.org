@@ -34,7 +34,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slatey-300 transition-colors hover:text-slatey-100"
+              className="font-mono text-2xs font-medium uppercase tracking-label text-slatey-300 transition-colors hover:text-slatey-100"
             >
               {link.label}
             </a>
@@ -81,7 +81,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="rounded-md px-2 py-3 text-base font-medium text-slatey-200 hover:bg-ink-800"
+                className="rounded-md px-2 py-3 font-mono text-xs font-medium uppercase tracking-label text-slatey-200 hover:bg-ink-800"
               >
                 {link.label}
               </a>

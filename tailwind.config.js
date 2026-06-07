@@ -28,7 +28,19 @@ export default {
         },
       },
       fontFamily: {
+        // Typography unified with oblikovati.com (Overlay type system):
+        // Albert Sans display + Newsreader reading serif + JetBrains Mono labels.
+        // `sans` aliases the display face so the existing default body font
+        // (which falls back to font-sans) renders in Albert Sans too.
+        display: [
+          'Albert Sans',
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
         sans: [
+          'Albert Sans',
           'Inter',
           'ui-sans-serif',
           'system-ui',
@@ -39,6 +51,12 @@ export default {
           'Arial',
           'sans-serif',
         ],
+        serif: [
+          'Newsreader',
+          'Iowan Old Style',
+          'Georgia',
+          'serif',
+        ],
         mono: [
           'JetBrains Mono',
           'ui-monospace',
@@ -47,6 +65,24 @@ export default {
           'Consolas',
           'monospace',
         ],
+      },
+      fontSize: {
+        // Modular scale (1.250 major third) shared with oblikovati.com.
+        '2xs': ['0.656rem', { lineHeight: '1.4' }],
+        xs: ['0.781rem', { lineHeight: '1.5' }],
+        sm: ['0.906rem', { lineHeight: '1.5' }],
+        base: ['1.031rem', { lineHeight: '1.65' }],
+        lg: ['1.188rem', { lineHeight: '1.6' }],
+        xl: ['1.5rem', { lineHeight: '1.2' }],
+        '2xl': ['2rem', { lineHeight: '1.1' }],
+        '3xl': ['2.75rem', { lineHeight: '1.05' }],
+        '4xl': ['4rem', { lineHeight: '0.98' }],
+        '5xl': ['6rem', { lineHeight: '0.95' }],
+      },
+      letterSpacing: {
+        tightest: '-0.025em',
+        snug: '-0.015em',
+        label: '0.16em', // eyebrow / mono labels
       },
       maxWidth: {
         content: '76rem',

@@ -1,6 +1,7 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Positioning from './components/Positioning.jsx'
+import Showcase from './components/Showcase.jsx'
 import Features from './components/Features.jsx'
 import Extensibility from './components/Extensibility.jsx'
 import Platforms from './components/Platforms.jsx'
@@ -23,6 +24,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <Positioning />
+        <Showcase />
         <Features />
         <Extensibility />
         <Platforms />

@@ -18,11 +18,11 @@ export const FAQ_ITEMS = [
     a: 'Yes. Oblikovati exposes an open, documented automation API under the permissive Apache-2.0 license. You can script repetitive workflows, build add-ins that extend the application, and integrate it with your own systems — all against a stable public contract.',
   },
   {
-    q: 'I come from Inventor, SolidWorks or NX. Will I have to relearn everything?',
-    a: 'No. Oblikovati follows the same parametric, feature-based, history-driven approach those tools use — sketches drive features, features build a model you can edit and reorder, and parameters tie it all together. The concepts transfer directly, so the learning curve is about the interface, not the philosophy.',
+    q: 'I come from a mainstream parametric CAD tool. Will I have to relearn everything?',
+    a: 'No. Oblikovati follows the same parametric, feature-based, history-driven approach the established tools use — sketches drive features, features build a model you can edit and reorder, and parameters tie it all together. The concepts transfer directly, so the learning curve is about the interface, not the philosophy.',
   },
   {
-    q: 'Is it ready for production work today?',
-    a: 'Oblikovati is in active, early development and growing quickly toward assemblies, drawings and sheet metal. Core part modeling is taking shape now. If you want professional, open CAD and want to influence its direction, this is a great time to get involved.',
+    q: 'What can it actually do today?',
+    a: 'A lot already: constrained 2D and 3D sketching, the full part feature set (extrude, revolve, sweep, loft, coil, hole, fillet, chamfer, shell, rib, draft, thread), surfacing, patterns and mirrors, an assembly environment with constraints, joints and a bill of materials, a sheet-metal environment with flat patterns, associative drawings, materials and appearances, measurement and physical properties, and file exchange. It is honest alpha software under active development — interoperability, simulation and automation are maturing — so verify critical results, but the core modeling workflow is real and usable now.',
   },
 ]

@@ -15,7 +15,7 @@ export default function Positioning() {
         <Reveal>
           <span className="eyebrow">For seasoned engineers</span>
           <h2 className="mt-5 text-3xl font-bold tracking-tight text-slatey-100 sm:text-4xl">
-            If you&apos;ve spent years in Inventor, SolidWorks or NX, you&apos;ll
+            If you&apos;ve spent years in mainstream parametric CAD, you&apos;ll
             feel at home.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-slatey-300">

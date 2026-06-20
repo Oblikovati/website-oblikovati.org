@@ -1,5 +1,4 @@
 import { ArrowRight, Github } from 'lucide-react'
-import ParametricVisual from './ParametricVisual.jsx'
 import { REPO_APP, REPO_API } from '../data/site.js'
 
 const PLATFORMS = ['Linux', 'macOS', 'Windows']
@@ -58,7 +57,19 @@ export default function Hero() {
         </div>
 
         <div className="animate-float-soft">
-          <ParametricVisual />
+          <figure className="overflow-hidden rounded-xl border border-ink-800/80 bg-ink-900/60 shadow-2xl shadow-black/40 ring-1 ring-inset ring-white/5">
+            <img
+              src="/shots/app-modeling.png"
+              width="1440"
+              height="900"
+              alt="The Oblikovati application: a ribbon of modeling tools, a parametric feature tree (Extrusion, Fillet, Hole) and a machined bracket shaded in the 3D viewport."
+              className="w-full"
+              loading="eager"
+            />
+          </figure>
+          <p className="mt-3 text-center text-xs text-slatey-500">
+            A live capture of Oblikovati — feature tree, modeling ribbon and shaded viewport.
+          </p>
         </div>
       </div>
     </section>

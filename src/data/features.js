@@ -4,18 +4,23 @@ import {
   GitBranch,
   Layers,
   Palette,
-  Shuffle,
   Repeat2,
   FileStack,
+  Spline,
+  Combine,
+  Frame,
+  Ruler,
+  Gauge,
 } from 'lucide-react'
 
-// Real capabilities, framed as benefits. Each entry maps to one card in the
-// capabilities grid. Keep copy outcome-oriented, not spec-sheet.
+// Real capabilities, framed as benefits. Each entry maps to one card in the capabilities
+// grid. Keep copy outcome-oriented, not spec-sheet. Every line below maps to functionality
+// present in the application today (see the project milestones M06–M22).
 export const FEATURES = [
   {
     icon: PenTool,
     title: 'Sketch with intent',
-    body: 'Constrain 2D and 3D sketches with dimensions and geometric relations, then let those profiles drive everything downstream.',
+    body: 'Constrain 2D and 3D sketches with dimensions and geometric relations, then let those fully-defined profiles drive everything downstream.',
   },
   {
     icon: Boxes,
@@ -38,18 +43,38 @@ export const FEATURES = [
     body: 'Reproduce features and bodies in rectangular, circular and mirrored arrangements without redrawing a thing.',
   },
   {
+    icon: Spline,
+    title: 'Surfaces & freeform',
+    body: 'Patch, stitch, sculpt, thicken, offset and trim surfaces — model the freeform shapes solids alone can’t express.',
+  },
+  {
+    icon: Combine,
+    title: 'Assemblies & BOM',
+    body: 'Place components, constrain and joint them into mechanisms, then read structure and quantities straight off a live bill of materials.',
+  },
+  {
+    icon: Frame,
+    title: 'Sheet metal',
+    body: 'Work in a dedicated sheet-metal environment with faces, flanges and bends — then unfold to a manufacturable flat pattern.',
+  },
+  {
+    icon: Ruler,
+    title: 'Drawings & documentation',
+    body: 'Generate associative views from your models and annotate them with dimensions and notes to document what gets built.',
+  },
+  {
+    icon: Gauge,
+    title: 'Measure & analyze',
+    body: 'Measure geometry, pull physical properties like mass and centre of gravity, and check model health as designs grow.',
+  },
+  {
     icon: Palette,
     title: 'Materials & appearance',
-    body: 'Assign materials and appearances to communicate intent and keep your models presentation-ready.',
+    body: 'Assign materials, color styles and appearances, then present models with realistic shading, lighting and shadows.',
   },
   {
     icon: FileStack,
     title: 'Industry file exchange',
-    body: 'Import and export STEP, STL, OBJ and 3MF, so Oblikovati slots into the pipelines and partners you already work with.',
-  },
-  {
-    icon: Shuffle,
-    title: 'A git-friendly document format',
-    body: 'Models are stored in a clean, diff-able format — version your designs, review changes and collaborate like you do with code.',
+    body: 'Import and export STEP, STL, OBJ, 3MF and DXF, so Oblikovati slots into the pipelines and partners you already work with.',
   },
 ]

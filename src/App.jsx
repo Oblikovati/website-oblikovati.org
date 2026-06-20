@@ -3,6 +3,7 @@ import Hero from './components/Hero.jsx'
 import Positioning from './components/Positioning.jsx'
 import Showcase from './components/Showcase.jsx'
 import Features from './components/Features.jsx'
+import Gallery from './components/Gallery.jsx'
 import Extensibility from './components/Extensibility.jsx'
 import Platforms from './components/Platforms.jsx'
 import Foundation from './components/Foundation.jsx'
@@ -26,6 +27,7 @@ export default function App() {
         <Positioning />
         <Showcase />
         <Features />
+        <Gallery />
         <Extensibility />
         <Platforms />
         <Foundation />

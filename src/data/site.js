@@ -6,6 +6,7 @@ export const REPO_API = 'https://github.com/Oblikovati/Oblikovati.API'
 
 export const NAV_LINKS = [
   { label: 'Features', href: '#features' },
+  { label: 'Examples', href: '#examples' },
   { label: 'Extensibility', href: '#extensibility' },
   { label: 'Platforms', href: '#platforms' },
   { label: 'FAQ', href: '#faq' },

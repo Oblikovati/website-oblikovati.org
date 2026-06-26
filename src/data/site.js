@@ -14,5 +14,5 @@ export const NAV_LINKS = [
   { label: 'Extensibility', href: '#extensibility' },
   { label: 'Platforms', href: '#platforms' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Stats', href: '#/stats' },
+  //{ label: 'Stats', href: '#/stats' },
 ]

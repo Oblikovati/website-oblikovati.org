@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  go-get vanity endpoint for the module `oblikovati.org/api`.
+
+  The public Apache-2.0 automation contract lives on GitHub, but its import path is the
+  stable vanity name `oblikovati.org/api` (ADR-0018). Go's tooling resolves that name by
+  fetching `https://oblikovati.org/api?go-get=1` and reading the <meta name="go-import">
+  tag below, then cloning the real repo. Without this page the path 404s, so `go get
+  oblikovati.org/api` — and any tool that resolves the module graph, e.g. Dependabot on the
+  application repo — fails. Served for /api by the static host; GOPROXY only queries the
+  module root, so this single page is sufficient for module resolution.
+-->
+<meta name="go-import" content="oblikovati.org/api git https://github.com/Oblikovati/Oblikovati.API">
+<meta name="go-source" content="oblikovati.org/api https://github.com/Oblikovati/Oblikovati.API https://github.com/Oblikovati/Oblikovati.API/tree/develop{/dir} https://github.com/Oblikovati/Oblikovati.API/blob/develop{/dir}/{file}#L{line}">
+<meta http-equiv="refresh" content="0; url=https://github.com/Oblikovati/Oblikovati.API">
+<title>oblikovati.org/api</title>
+</head>
+<body>
+Redirecting to the <a href="https://github.com/Oblikovati/Oblikovati.API">oblikovati.org/api</a> source repository&hellip;
+</body>
+</html>

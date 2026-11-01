@@ -27,6 +27,12 @@ backend — just HTML, CSS, JS and the SVG assets.
 
 ## Deploy
 
+Production runs on the Hetzner K3s cluster. Pushes to `main` build an immutable
+GHCR image and apply `deploy/kubernetes/production.yaml`. The repository needs
+the `KUBECONFIG_HETZNER` GitHub secret. The manifest serves both
+`oblikovati.org` and `www.oblikovati.org`; point both DNS records to the cluster
+before the Let’s Encrypt HTTP challenge runs.
+
 Deploy the contents of `dist/` to any static host:
 
 - **GitHub Pages** — push `dist/` (or use an action) to the Pages branch.

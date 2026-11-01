@@ -22,6 +22,8 @@ spec:
         app.kubernetes.io/name: website-org
     spec:
       automountServiceAccountToken: false
+      imagePullSecrets:
+        - name: ghcr-pull
       securityContext:
         runAsNonRoot: true
         runAsUser: 101

@@ -1,80 +1,65 @@
-import {
-  PenTool,
-  Boxes,
-  GitBranch,
-  Layers,
-  Palette,
-  Repeat2,
-  FileStack,
-  Spline,
-  Combine,
-  Frame,
-  Ruler,
-  Gauge,
-} from 'lucide-react'
-
-// Real capabilities, framed as benefits. Each entry maps to one card in the capabilities
-// grid. Keep copy outcome-oriented, not spec-sheet. Every line below maps to functionality
-// present in the application today (see the project milestones M06–M22).
+// Real capabilities present in Oblikovati, written in the direct, factual,
+// technical brand voice (01-BRAND-IDENTITY.md §1.3) and paired with official
+// 2.5D vector isometric icons from Design/assets/icons/.
 export const FEATURES = [
   {
-    icon: PenTool,
-    title: 'Sketch with intent',
-    body: 'Constrain 2D and 3D sketches with dimensions and geometric relations, then let those fully-defined profiles drive everything downstream.',
+    icon: '/icons/sketch.svg',
+    title: 'Constrained sketching',
+    body: 'Define 2D and 3D sketches with dimensions and geometric constraints. Use fully constrained profiles to drive downstream features.',
   },
   {
-    icon: Boxes,
-    title: 'A full feature toolkit',
-    body: 'Extrude, revolve, sweep, loft, coil, hole, fillet, chamfer, shell, rib, draft and thread — the operations real parts demand.',
+    icon: '/icons/features.svg',
+    title: 'Solid modeling features',
+    body: 'Create geometry with extrude, revolve, sweep, loft, coil, hole, fillet, chamfer, shell, rib, draft, and thread operations.',
   },
   {
-    icon: GitBranch,
+    icon: '/icons/history.svg',
     title: 'Parametric history',
-    body: 'Every step lives in an editable feature tree. Change a dimension and the whole model recomputes — with reliable undo and redo.',
+    body: 'Store every operation in an editable feature tree. Edit any parameter to recompute the model with deterministic undo and redo.',
   },
   {
-    icon: Layers,
-    title: 'Work geometry that anchors design',
-    body: 'Build on work planes, axes and points to locate features precisely and keep complex models robust as they evolve.',
+    icon: '/icons/work-geometry.svg',
+    title: 'Work geometry',
+    body: 'Place work planes, work axes, and work points to anchor features and maintain stable references across design changes.',
   },
   {
-    icon: Repeat2,
-    title: 'Pattern & mirror',
-    body: 'Reproduce features and bodies in rectangular, circular and mirrored arrangements without redrawing a thing.',
+    icon: '/icons/pattern.svg',
+    title: 'Patterns and mirrors',
+    body: 'Replicate features and solid bodies in rectangular, circular, and mirrored arrays driven by parametric counts and spacing.',
   },
   {
-    icon: Spline,
-    title: 'Surfaces & freeform',
-    body: 'Patch, stitch, sculpt, thicken, offset and trim surfaces — model the freeform shapes solids alone can’t express.',
+    icon: '/icons/surfaces.svg',
+    title: 'Surfacing',
+    body: 'Patch, stitch, sculpt, thicken, offset, and trim surfaces to build complex geometry beyond prismatic solids.',
   },
   {
-    icon: Combine,
-    title: 'Assemblies & BOM',
-    body: 'Place components, constrain and joint them into mechanisms, then read structure and quantities straight off a live bill of materials.',
+    icon: '/icons/assembly.svg',
+    title: 'Assemblies and BOM',
+    body: 'Place components, apply constraints and joints, and inspect part structure and quantities in a live bill of materials.',
   },
   {
-    icon: Frame,
+    icon: '/icons/sheet-metal.svg',
     title: 'Sheet metal',
-    body: 'Work in a dedicated sheet-metal environment with faces, flanges and bends — then unfold to a manufacturable flat pattern.',
+    body: 'Model faces, flanges, and bends in a dedicated sheet-metal workspace, then unfold parts into flat patterns for fabrication.',
   },
   {
-    icon: Ruler,
-    title: 'Drawings & documentation',
-    body: 'Generate associative views from your models and annotate them with dimensions and notes to document what gets built.',
+    icon: '/icons/drawing.svg',
+    title: 'Associative drawings',
+    body: 'Generate orthographic and isometric views from 3D models, add dimensions and annotations, and export sheets to DXF.',
   },
   {
-    icon: Gauge,
-    title: 'Measure & analyze',
-    body: 'Measure geometry, pull physical properties like mass and centre of gravity, and check model health as designs grow.',
+    icon: '/icons/measure.svg',
+    title: 'Measurement and analysis',
+    body: 'Measure distances and angles, compute mass and center of gravity, and inspect model topology and health.',
   },
   {
-    icon: Palette,
-    title: 'Materials & appearance',
-    body: 'Assign materials, color styles and appearances, then present models with realistic shading, lighting and shadows.',
+    icon: '/icons/materials.svg',
+    title: 'Materials and appearance',
+    body: 'Assign physical materials, color styles, and surface finishes with physically based shading and ground shadows.',
   },
   {
-    icon: FileStack,
-    title: 'Industry file exchange',
-    body: 'Import and export STEP, STL, OBJ, 3MF and DXF, so Oblikovati slots into the pipelines and partners you already work with.',
+    icon: '/icons/exchange.svg',
+    title: 'Standard file exchange',
+    body: 'Import and export STEP, STL, OBJ, 3MF, and DXF files to exchange geometry with external CAD and manufacturing tools.',
   },
 ]

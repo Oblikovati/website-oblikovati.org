@@ -18,33 +18,33 @@ export default function Hero() {
 
       <div className="container-content grid items-center gap-14 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
         <div className="animate-fade-up">
-          <span className="eyebrow">Open-source parametric CAD</span>
+          <span className="eyebrow">Open-source parametric MCAD</span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-slatey-100 sm:text-5xl lg:text-6xl">
-            Shape your ideas.
+          <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight text-slatey-100 sm:text-5xl lg:text-6xl">
+            Shape with precision.
             <br />
             <span className="text-gradient">Own your tools.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slatey-300">
-            Oblikovati is a professional, parametric, feature-based mechanical
-            CAD application — the history-driven workflow you already know, made
-            fully open source and native on every desktop you actually use.
+            Oblikovati is open-source, parametric, feature-based mechanical CAD
+            software. It delivers a deterministic history-driven workflow with
+            native performance on Linux, macOS, and Windows.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a href={REPO_APP} target="_blank" rel="noreferrer" className="btn-primary">
-              Get started
+              Get Started
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a href={REPO_API} target="_blank" rel="noreferrer" className="btn-secondary">
               <Github className="h-4 w-4" aria-hidden="true" />
-              Explore the API
+              Explore API
             </a>
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slatey-400">
-            <span className="font-medium text-slatey-300">Runs natively on</span>
+            <span className="font-medium text-slatey-300">Native platforms</span>
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
               {PLATFORMS.map((os) => (
                 <li key={os} className="flex items-center gap-2">
@@ -56,19 +56,19 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="animate-float-soft">
-          <figure className="overflow-hidden rounded-xl border border-ink-800/80 bg-ink-900/60 shadow-2xl shadow-black/40 ring-1 ring-inset ring-white/5">
+        <div>
+          <figure className="overflow-hidden rounded-md border border-ink-700 bg-ink-900 shadow-panel">
             <img
               src="/shots/app-modeling.png"
               width="1440"
               height="900"
-              alt="The Oblikovati application: a ribbon of modeling tools, a parametric feature tree (Extrusion, Fillet, Hole) and a machined bracket shaded in the 3D viewport."
+              alt="Oblikovati workspace showing the 3D Model ribbon, parametric model browser, Extrude properties panel, and a machined bracket in the 3D viewport."
               className="w-full"
               loading="eager"
             />
           </figure>
-          <p className="mt-3 text-center text-xs text-slatey-500">
-            A live capture of Oblikovati — feature tree, modeling ribbon and shaded viewport.
+          <p className="mt-3 text-center font-mono text-xs text-slatey-400">
+            Oblikovati workspace: parametric model browser, ribbon, and 3D viewport.
           </p>
         </div>
       </div>

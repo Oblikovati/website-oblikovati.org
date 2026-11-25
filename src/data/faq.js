@@ -1,28 +1,27 @@
-// FAQ content. Answers stay honest about early-development status while
-// staying professional and aspirational.
+// FAQ content written in the direct, factual, calm Oblikovati brand voice.
 export const FAQ_ITEMS = [
   {
-    q: 'Is it really free?',
-    a: 'Yes. Oblikovati is fully open source and free to use, with no subscription, no per-seat licensing and no paywalled features. The application is GPL-2.0 and the public automation API is Apache-2.0. You can read, build and contribute to the code yourself.',
+    q: 'What license does Oblikovati use?',
+    a: 'Oblikovati is open source and free to use without subscriptions or per-seat licenses. The application is licensed under GPL-2.0. The public automation API is licensed under Apache-2.0.',
   },
   {
-    q: 'Will my STEP files work?',
-    a: 'Oblikovati supports industry-standard file exchange — you can import and export STEP, as well as STL, OBJ and 3MF — so it fits into the pipelines and partner workflows you already use. As the project matures, exchange fidelity continues to improve.',
+    q: 'Does Oblikovati support STEP files?',
+    a: 'Yes. Oblikovati imports and exports STEP, STL, OBJ, 3MF, and DXF files for exchange with external CAD and manufacturing pipelines. Exchange fidelity improves with each release.',
   },
   {
-    q: 'Does it run on Linux?',
-    a: 'Yes — natively, as a first-class target alongside macOS and Windows. No virtual machine, no compatibility layer. Linux is exactly the platform commercial CAD vendors tend to neglect, and Oblikovati treats it as a peer.',
+    q: 'Does Oblikovati run natively on Linux?',
+    a: 'Yes. Linux, macOS, and Windows are all native targets. Oblikovati requires no virtual machine or compatibility layer.',
   },
   {
-    q: 'Can I automate it?',
-    a: 'Yes. Oblikovati exposes an open, documented automation API under the permissive Apache-2.0 license. You can script repetitive workflows, build add-ins that extend the application, and integrate it with your own systems — all against a stable public contract.',
+    q: 'Can I automate workflows and build add-ins?',
+    a: 'Yes. Oblikovati provides a documented Apache-2.0 automation API. Use it to script repeatable tasks, create custom add-ins, and integrate with external engineering systems.',
   },
   {
-    q: 'I come from a mainstream parametric CAD tool. Will I have to relearn everything?',
-    a: 'No. Oblikovati follows the same parametric, feature-based, history-driven approach the established tools use — sketches drive features, features build a model you can edit and reorder, and parameters tie it all together. The concepts transfer directly, so the learning curve is about the interface, not the philosophy.',
+    q: 'How does the workflow compare to commercial parametric CAD?',
+    a: 'Oblikovati uses the standard history-driven parametric workflow: constrained sketches drive features, features populate an ordered model tree, and parameters control dimensions across parts and assemblies.',
   },
   {
-    q: 'What can it actually do today?',
-    a: 'A lot already: constrained 2D and 3D sketching, the full part feature set (extrude, revolve, sweep, loft, coil, hole, fillet, chamfer, shell, rib, draft, thread), surfacing, patterns and mirrors, an assembly environment with constraints, joints and a bill of materials, a sheet-metal environment with flat patterns, associative drawings, materials and appearances, measurement and physical properties, and file exchange. It is honest alpha software under active development — interoperability, simulation and automation are maturing — so verify critical results, but the core modeling workflow is real and usable now.',
+    q: 'What is the current development status?',
+    a: 'Oblikovati is alpha software under active development. Core modeling is available now: 2D and 3D constrained sketching, part features, surfacing, patterns, assemblies with BOM, sheet metal with flat patterns, associative drawings, physical properties, and standard file exchange. Verify critical engineering outputs before production use.',
   },
 ]

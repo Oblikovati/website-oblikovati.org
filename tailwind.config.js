@@ -4,107 +4,115 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Deep engineering-grade dark surface palette.
+        // Oblikovati Design System v1.0 — Dark Theme (Matte Carbon surfaces & borders).
         ink: {
-          950: '#070b14',
-          900: '#0b1220',
-          850: '#0e1626',
-          800: '#111c30',
-          700: '#1a2942',
-          600: '#243757',
+          950: '#0D0E11', // bg.canvas.frame
+          900: '#121317', // bg.surface.base
+          850: '#181A20', // bg.surface.elevated
+          800: '#1F222A', // bg.surface.subtle
+          700: '#2D313D', // border.default / bg.surface.hover
+          600: '#3F4556', // border.strong / bg.surface.active
         },
-        // Brand accents pulled from the logo gradient (teal -> sky).
+        // Calibrated Indigo-Violet brand accent + Crisp Teal selection accent.
         signal: {
-          DEFAULT: '#38bdf8',
-          soft: '#5eead4',
-          deep: '#0ea5e9',
+          DEFAULT: '#8172FA', // accent.brand.default
+          fill: '#6754E8',    // accent.brand.fill (WCAG AA with #FFFFFF text)
+          hover: '#7866F2',   // accent.brand.hover
+          active: '#5845D6',  // accent.brand.active
+          soft: '#2DD4BF',    // accent.selection.bright (Teal)
+          deep: '#6754E8',    // accent.brand.fill
         },
+        teal: {
+          DEFAULT: '#14B8A6', // accent.selection.default
+          bright: '#2DD4BF',  // accent.selection.bright
+          deep: '#0D9488',
+        },
+        amber: {
+          DEFAULT: '#F59E0B', // accent.work.default
+          bright: '#FBBF24',  // accent.work.bright
+        },
+        // Dark Theme achromatic text hierarchy.
         slatey: {
-          100: '#e6edf6',
-          200: '#cdd9e8',
-          300: '#a9bace',
-          400: '#7e92ac',
-          500: '#5d7088',
+          100: '#ECEEF2', // text.primary
+          200: '#D2D7E2', // icon/body emphasis
+          300: '#9CA3B2', // text.secondary
+          400: '#7C8496', // text.muted
+          500: '#525866', // text.disabled
         },
       },
       fontFamily: {
-        // Typography unified with oblikovati.com (Overlay type system):
-        // Albert Sans display + Newsreader reading serif + JetBrains Mono labels.
-        // `sans` aliases the display face so the existing default body font
-        // (which falls back to font-sans) renders in Albert Sans too.
+        // Oblikovati Typography System: Inter UI/display + JetBrains Mono technical.
         display: [
-          'Albert Sans',
           'Inter',
-          'ui-sans-serif',
-          'system-ui',
+          'Segoe UI Variable',
+          'Segoe UI',
+          '-apple-system',
+          'BlinkMacSystemFont',
           'sans-serif',
         ],
         sans: [
-          'Albert Sans',
           'Inter',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
+          'Segoe UI Variable',
           'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
+          '-apple-system',
+          'BlinkMacSystemFont',
           'sans-serif',
         ],
         serif: [
-          'Newsreader',
-          'Iowan Old Style',
-          'Georgia',
-          'serif',
+          'Inter',
+          'Segoe UI Variable',
+          'Segoe UI',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'sans-serif',
         ],
         mono: [
           'JetBrains Mono',
-          'ui-monospace',
-          'SFMono-Regular',
-          'Menlo',
+          'Cascadia Mono',
           'Consolas',
+          'ui-monospace',
           'monospace',
         ],
       },
       fontSize: {
-        // Modular scale (1.250 major third) shared with oblikovati.com.
         '2xs': ['0.656rem', { lineHeight: '1.4' }],
         xs: ['0.781rem', { lineHeight: '1.5' }],
         sm: ['0.906rem', { lineHeight: '1.5' }],
-        base: ['1.031rem', { lineHeight: '1.65' }],
-        lg: ['1.188rem', { lineHeight: '1.6' }],
-        xl: ['1.5rem', { lineHeight: '1.2' }],
-        '2xl': ['2rem', { lineHeight: '1.1' }],
-        '3xl': ['2.75rem', { lineHeight: '1.05' }],
-        '4xl': ['4rem', { lineHeight: '0.98' }],
-        '5xl': ['6rem', { lineHeight: '0.95' }],
+        base: ['1rem', { lineHeight: '1.6' }],
+        lg: ['1.125rem', { lineHeight: '1.55' }],
+        xl: ['1.375rem', { lineHeight: '1.25' }],
+        '2xl': ['1.875rem', { lineHeight: '1.15' }],
+        '3xl': ['2.5rem', { lineHeight: '1.08' }],
+        '4xl': ['3.5rem', { lineHeight: '1.02' }],
+        '5xl': ['5rem', { lineHeight: '0.98' }],
       },
       letterSpacing: {
         tightest: '-0.025em',
         snug: '-0.015em',
-        label: '0.16em', // eyebrow / mono labels
+        label: '0.12em',
       },
       maxWidth: {
         content: '76rem',
       },
       borderRadius: {
-        xl2: '1.25rem',
+        // Architectural sharpness (4px–8px restrained radii).
+        xl2: '0.5rem',
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(56,189,248,0.18), 0 18px 50px -18px rgba(56,189,248,0.35)',
-        panel: '0 24px 60px -30px rgba(0,0,0,0.8)',
+        glow: '0 0 0 1px rgba(129,114,250,0.22), 0 12px 32px rgba(0,0,0,0.60)',
+        panel: '0 12px 32px rgba(0,0,0,0.60)',
       },
       backgroundImage: {
         'grid-faint':
-          'linear-gradient(to right, rgba(94,234,212,0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(56,189,248,0.045) 1px, transparent 1px)',
-        'brand-gradient': 'linear-gradient(120deg, #5eead4 0%, #38bdf8 100%)',
+          'linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)',
+        'brand-gradient': 'linear-gradient(120deg, #8172FA 0%, #2DD4BF 100%)',
       },
       backgroundSize: {
-        grid: '46px 46px',
+        grid: '48px 48px',
       },
       keyframes: {
         'fade-up': {
-          '0%': { opacity: '0', transform: 'translateY(14px)' },
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         'spin-slow': {
@@ -113,11 +121,11 @@ export default {
         },
         'float-soft': {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
       },
       animation: {
-        'fade-up': 'fade-up 0.6s ease-out both',
+        'fade-up': 'fade-up 0.35s cubic-bezier(0.2, 0.0, 0.0, 1.0) both',
         'spin-slow': 'spin-slow 48s linear infinite',
         'float-soft': 'float-soft 7s ease-in-out infinite',
       },

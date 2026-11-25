@@ -9,59 +9,58 @@ export default function Ownership() {
       <div className="container-content">
         <SectionHeading
           eyebrow="Open source"
-          title="Transparent by design, yours to keep"
-          lede="Oblikovati is fully open source. You can read it, build it, fork it and contribute to it — and nobody can take that away or lock it behind a paywall."
+          title="Transparent source, permanent access"
+          lede="Read, build, audit, and modify the complete codebase. Oblikovati uses standard open-source licenses with no feature paywalls."
         />
 
         <div className="mx-auto mt-14 grid max-w-4xl gap-5 md:grid-cols-2">
           <Reveal>
             <article className="surface-card h-full p-7">
-              <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-signal/10 text-signal-soft ring-1 ring-inset ring-signal/20">
+              <span className="flex h-11 w-11 items-center justify-center rounded border border-ink-700 bg-ink-800 text-signal-soft">
                 <Scale className="h-5 w-5" aria-hidden="true" />
               </span>
               <h3 className="mt-5 text-lg font-semibold text-slatey-100">
-                Clear, honest licensing
+                Clear dual-boundary licensing
               </h3>
-              <p className="mt-2 leading-relaxed text-slatey-400">
+              <p className="mt-2 text-sm leading-relaxed text-slatey-400">
                 The application is licensed under{' '}
-                <span className="font-medium text-slatey-200">GPL-2.0</span>, and
-                the public automation API under the permissive{' '}
+                <span className="font-medium text-slatey-200">GPL-2.0</span>.
+                The public automation API is licensed under{' '}
                 <span className="font-medium text-slatey-200">Apache-2.0</span>{' '}
-                license — so you can build on the contract freely.
+                for permissive add-in development.
               </p>
             </article>
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={100}>
             <article className="surface-card h-full p-7">
-              <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-signal/10 text-signal-soft ring-1 ring-inset ring-signal/20">
+              <span className="flex h-11 w-11 items-center justify-center rounded border border-ink-700 bg-ink-800 text-signal-soft">
                 <ShieldCheck className="h-5 w-5" aria-hidden="true" />
               </span>
               <h3 className="mt-5 text-lg font-semibold text-slatey-100">
-                No lock-in, ever
+                No vendor lock-in
               </h3>
-              <p className="mt-2 leading-relaxed text-slatey-400">
-                No subscriptions, no per-seat licenses, no vendor that can strand
-                your data. Your designs live in an open, diff-able format you
-                control.
+              <p className="mt-2 text-sm leading-relaxed text-slatey-400">
+                No subscriptions and no per-seat license fees. Designs are stored
+                in an open, inspectable format under your control.
               </p>
             </article>
           </Reveal>
         </div>
 
-        <Reveal delay={200}>
+        <Reveal delay={160}>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a href={REPO_APP} target="_blank" rel="noreferrer" className="btn-primary">
               <Github className="h-4 w-4" aria-hidden="true" />
-              Contribute on GitHub
+              View Source on GitHub
             </a>
             <a href={REPO_API} target="_blank" rel="noreferrer" className="btn-secondary">
-              View the API repository
+              View API Repository
             </a>
           </div>
-          <p className="mt-6 text-center text-sm text-slatey-500">
-            Oblikovati is in active, early development. Star the repository to
-            follow along and help shape where it goes.
+          <p className="mt-6 text-center text-sm text-slatey-400">
+            Oblikovati is alpha software under active development. Follow progress
+            and report issues on GitHub.
           </p>
         </Reveal>
       </div>

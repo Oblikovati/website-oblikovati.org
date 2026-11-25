@@ -9,19 +9,18 @@ const RESOURCE_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink-800/80 bg-ink-950">
+    <footer className="border-t border-ink-700/70 bg-ink-950">
       <div className="container-content py-14">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Wordmark />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slatey-400">
-              Open-source parametric, feature-based CAD. Shape your ideas — own
-              your tools.
+              Open-source parametric, feature-based mechanical CAD software.
             </p>
           </div>
 
           <nav aria-label="Sections">
-            <h2 className="text-sm font-semibold text-slatey-200">Explore</h2>
+            <h2 className="text-sm font-semibold text-slatey-200">Navigation</h2>
             <ul className="mt-4 space-y-2.5">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -37,7 +36,7 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Resources">
-            <h2 className="text-sm font-semibold text-slatey-200">Project</h2>
+            <h2 className="text-sm font-semibold text-slatey-200">Repositories</h2>
             <ul className="mt-4 space-y-2.5">
               {RESOURCE_LINKS.map((link) => (
                 <li key={link.href}>
@@ -56,7 +55,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 border-t border-ink-800/80 pt-8">
+        <div className="mt-12 border-t border-ink-700/70 pt-8">
           <p className="text-xs leading-relaxed text-slatey-500">
             Autodesk&reg; Inventor&reg;, SolidWorks&reg;, and Siemens NX&reg; are
             trademarks of their respective owners and are referenced for

@@ -1,32 +1,30 @@
 import SectionHeading from './SectionHeading.jsx'
 import Reveal from './Reveal.jsx'
 
-// A worked example tells the story the feature grid can't: one design taken from separate
-// parts, to an assembly, to a documented drawing. Every image is a live capture from the app.
 const SHOTS = [
   {
     src: '/shots/motor-assembly.png',
     w: 1106,
     h: 607,
-    alt: 'An electric-motor assembly: a steel stator with teeth, a gold rotor and a ring of orange magnets, each component shaded in its own material.',
-    title: 'Assemblies that read as assemblies',
-    body: 'Stator, rotor and magnets are separate parts, placed coaxially and each given its own material and appearance — so at a glance it is obvious what is what.',
+    alt: 'Electric motor assembly with a slotted steel stator, segmented magnet ring, and brass rotor core in the 3D viewport.',
+    title: 'Multi-component assemblies',
+    body: 'Model the stator, rotor, and magnets as separate parts. Position them coaxially and assign distinct materials for clear visual inspection.',
   },
   {
     src: '/shots/motor-assembly-app.png',
     w: 1440,
     h: 900,
-    alt: 'The assembly open in Oblikovati: a component browser listing Stator, Rotor and Magnets beside the shaded motor in the viewport.',
-    title: 'A real product structure',
-    body: 'Components live in a browser you can select, ground, suppress and pattern, with a live bill of materials that reflects structure and quantities.',
+    alt: 'Oblikovati Assemble workspace displaying the model browser with Stator, Rotor, and Magnets beside the shaded motor assembly.',
+    title: 'Structured product hierarchy',
+    body: 'Manage components in the model browser. Ground, suppress, and pattern occurrences while tracking quantities in a live bill of materials.',
   },
   {
     src: '/shots/motor-drawing.png',
     w: 1440,
     h: 900,
-    alt: 'An A3 drawing sheet documenting the stator with front, top, right and isometric views, a border and a title block.',
-    title: 'Documented, not redrawn',
-    body: 'Generate associative views onto a titled sheet, dimension them, and export to DXF — the drawing tracks the model it came from.',
+    alt: 'Oblikovati Drawing workspace showing an ISO A3 sheet with orthographic and isometric views of the motor stator and a title block.',
+    title: 'Associative engineering drawings',
+    body: 'Project orthographic and isometric views onto standard sheets, add dimensions, and export to DXF. Views update automatically when the 3D model changes.',
   },
 ]
 
@@ -36,16 +34,16 @@ export default function Gallery() {
       <div className="container-content">
         <SectionHeading
           eyebrow="Worked example"
-          title="From separate parts to a documented assembly"
-          lede="One design — a small electric motor — taken the whole way through Oblikovati: three parts modeled, assembled with distinct materials, and put on a drawing. Every image below is a live capture from the application."
+          title="From individual parts to documented assemblies"
+          lede="Follow an electric motor design through three stages: part modeling, coaxial assembly with materials, and ISO A3 drawing documentation."
         />
 
-        <div className="mt-14 space-y-6">
+        <div className="mt-14 space-y-8">
           {SHOTS.map((shot, index) => (
-            <Reveal key={shot.src} delay={(index % 2) * 100}>
+            <Reveal key={shot.src} delay={(index % 2) * 80}>
               <article className="grid items-center gap-8 lg:grid-cols-2">
                 <figure
-                  className={`overflow-hidden rounded-xl border border-ink-800/80 bg-ink-950 shadow-2xl shadow-black/40 ring-1 ring-inset ring-white/5 ${
+                  className={`overflow-hidden rounded-md border border-ink-700 bg-ink-950 shadow-panel ${
                     index % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >

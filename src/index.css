@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Oblikovati Visual Identity v1.0 — Dark Mode Flagship.
+ * Ultra-Minimal Technical: Matte Carbon surfaces, hairline 1px borders,
+ * Calibrated Indigo-Violet brand accent, Crisp Teal selection accent,
+ * Inter UI typography + JetBrains Mono technical numerals.
+ */
 @layer base {
   :root {
     color-scheme: dark;
@@ -12,29 +18,32 @@
     @apply bg-ink-950 text-slatey-200 antialiased;
   }
 
-  /* Body is the Newsreader reading serif, matching oblikovati.com's
-     Overlay-derived type system. Colors stay on the .org dark palette. */
   body {
-    @apply font-serif;
+    @apply font-sans;
+    font-feature-settings: 'cv05' 1, 'tnum' 1;
     text-rendering: optimizeLegibility;
   }
 
-  /* Headings and the wordmark use the geometric display sans (Albert Sans),
-     with the same tight tracking convention as oblikovati.com. */
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display font-extrabold;
+    @apply font-display font-semibold text-slatey-100;
     letter-spacing: -0.02em;
   }
 
-  ::selection {
-    background-color: rgba(56, 189, 248, 0.28);
-    color: #e6edf6;
+  code,
+  pre,
+  kbd,
+  .font-mono {
+    font-feature-settings: 'tnum' 1, 'zero' 1;
   }
 
-  /* Visible, consistent keyboard focus across interactive elements. */
+  ::selection {
+    background-color: rgba(129, 114, 250, 0.28);
+    color: #ECEEF2;
+  }
+
   :focus-visible {
     outline: 2px solid theme('colors.signal.DEFAULT');
     outline-offset: 2px;
@@ -51,32 +60,30 @@
     @apply bg-brand-gradient bg-clip-text text-transparent;
   }
 
-  /* Mono uppercase eyebrow label, matching oblikovati.com's label
-     typography; keeps the .org signal-accent pill treatment. */
+  /* Technical mono eyebrow label with hairline border and Indigo-Violet wash. */
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-signal/25 bg-signal/5 px-3 py-1 font-mono text-2xs font-medium uppercase tracking-label text-signal-soft;
+    @apply inline-flex items-center gap-2 rounded border border-signal/30 bg-signal/15 px-3 py-1 font-mono text-2xs font-semibold uppercase tracking-label text-signal;
   }
 
-  /* Keep buttons in the display sans (Albert Sans) so they don't inherit the
-     serif body face; preserves .org's existing button shape and weight. */
+  /* Architectural buttons: crisp 4px radius, 80ms transitions, WCAG AA contrast. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-display text-sm font-semibold transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 rounded px-5 py-2.5 font-display text-sm font-medium transition-colors duration-100;
   }
 
   .btn-primary {
-    @apply btn bg-brand-gradient text-ink-950 hover:brightness-110;
+    @apply btn bg-signal-fill text-white hover:bg-signal-hover active:bg-signal-active;
   }
 
   .btn-secondary {
-    @apply btn border border-ink-600 bg-ink-800/60 text-slatey-100 hover:border-signal/50 hover:bg-ink-700/60;
+    @apply btn border border-ink-700 bg-ink-800 text-slatey-100 hover:border-signal/60 hover:bg-ink-700/70;
   }
 
+  /* Hairline-first elevated card on Carbon base. */
   .surface-card {
-    @apply rounded-xl2 border border-ink-700/70 bg-ink-850/70 backdrop-blur-sm;
+    @apply rounded-md border border-ink-700/80 bg-ink-850;
   }
 }
 
-/* Honor users who prefer reduced motion: kill non-essential animation. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

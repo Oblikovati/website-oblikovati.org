@@ -30,17 +30,17 @@ const PLATFORMS = [
   {
     name: 'Linux',
     Mark: LinuxMark,
-    body: 'A true native experience on the OS commercial CAD vendors keep ignoring — no virtual machines, no compromises.',
+    body: 'Native Linux binaries with hardware-accelerated rendering. No virtual machines or compatibility layers.',
   },
   {
     name: 'macOS',
     Mark: AppleMark,
-    body: 'Run the same parametric workflow on your Mac, with native performance and a consistent feature set.',
+    body: 'Native macOS support with consistent parametric tools and identical file compatibility.',
   },
   {
     name: 'Windows',
     Mark: WindowsMark,
-    body: 'First-class on Windows too, so mixed teams share one tool, one file format and one workflow.',
+    body: 'Native Windows support so mixed-OS teams share one application, one file format, and one workflow.',
   },
 ]
 
@@ -50,15 +50,15 @@ export default function Platforms() {
       <div className="container-content">
         <SectionHeading
           eyebrow="Cross-platform"
-          title="One CAD application. Every desktop."
-          lede="Linux, macOS and Windows are all first-class targets — pick the OS that fits your team, not the one your software forces on you."
+          title="One CAD platform across desktop operating systems"
+          lede="Linux, macOS, and Windows are all native targets with feature parity and a shared file format."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {PLATFORMS.map((platform, index) => {
             const { Mark } = platform
             return (
-              <Reveal key={platform.name} delay={index * 100}>
+              <Reveal key={platform.name} delay={index * 80}>
                 <article className="surface-card flex h-full flex-col items-center p-8 text-center">
                   <span className="text-signal-soft">
                     <Mark />
